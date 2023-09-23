@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ShopDunk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="MasterLayout.css" />
+    <style tyle="text/css">
+        #footer {
+            background-color: black;
+            width: 100%;
+            height: 500px;
+        }
+        #KhuyenMai {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        #header-menu {
+            max-width: 980px;
+            display: table-cell;
+            text-align: center;
+        }
+
+        #topmenu {
+            max-width: 1185px;
+            display: table;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            width: 100%; /*Optional*/
+            height: 70px;
+            table-layout: fixed; /*Optional*/
+            border-spacing: revert; /*Optional*/
+            background-color: grey;
+        }
+
+        #header-logo {
+            text-align: left;
+            cursor: crosshair;
+            margin: auto;
+            vertical-align: middle;
+            padding: 0px 0px 0px 20px;
+            width: 15%;
+            display: table-cell;
+            object-fit: cover;
+            max-width: 173px;
+            max-height: 64px;
+        }
+
+        #header-menu {
+            max-width: 980px;
+            display: table-cell;
+            text-align: center;
+        }
+
+        #header-icon-flag {
+            width: 15%;
+            display: table-cell;
+            object-fit: cover;
+        }
+
+        #Header {
+            width: 100%;
+            background-color: grey;
+            position: sticky;
+        }
+
+        #menu {
+            justify-content: space-between;
+            max-height: 150px;
+            display: flex;
+            list-style: none;
+            margin-bottom: 0;
+           padding:15px;
+           
+          
+            font-size: 15px;
+        }
+
+        #logo-shopdunk {
+            width: 100%;
+            max-width: 176px;
+            max-height: 64px;
+            object-fit: cover;
+        }
+
+        #icon-flags {
+            align-items: center;
+        }
+        #newRegister {
+            text-align: center;
+        }
+
+        #Prod-img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+         
+        #Prod-img {
+            max-height: 150px;
+            max-width: 150px;
+        }
+        #ProdName {
+            font-family: Arial;
+            font-size: medium;
+            font-weight: 200;
+            max-block-size: revert-layer;
+        
+        }
+        #newPrice {
+            color: cornflowerblue;
+            display: inline;
+            font-style: oblique;
+            font-family: 'Times New Roman';
+        }
+        #oldPrice{
+            color:gray;
+            font-family:'Times New Roman';
+            font-size:small;
+            display:inline;
+        }
+        #newPrice{
+            color:gray;
+            font-family:Arial;
+            font-size:small;
+            display:inline;
+        }
+
+       
+        #text1 {
+            width: 30%;
+            text-align: justify-all;
+            font-size: 15px;
+            color: aliceblue;
+            padding-bottom: 8px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        #text2 {
+            text-decoration: none;
+            width: 20%;
+            font-size: 13px;
+            color: aliceblue;
+            padding-bottom: 10px;
+            line-height: 30px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        #text3 {
+            width: 20%;
+            text-align: justify-all;
+            font-size: 13px;
+            color: aliceblue;
+            padding-bottom: 8px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        #text4 {
+            width: 20%;
+            text-align: justify-all;
+            font-size: 13px;
+            color: aliceblue;
+            padding-bottom: 8px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        #footer-bottom {
+            font-size: 13px;
+            line-height: 20px;
+            color: #515154;
+            background-color: black;
+        }
+        #email {
+            width: 400px;
+            border: 1px solid white;
+            padding-left: 10px;
+        }
+
+        #register {
+            width: 100px;
+            border: 1px solid royalblue;
+            margin-left: -50px;
+            background-color: royalblue;
+        }
+
+        #email, #register {
+            height: 40px;
+            border-radius: 20px;
+        }
+        #prod-Info {
+            width: 80%;
+            display: table;
+            min-height: 50px;
+            margin: auto;
+            justify-content: center;
+            border-spacing: 20px;
+       
+           
+        }
+        #prodCat {
+            border: 1px solid #0066CC;
+            border-radius: 8px;
+            padding: 5.5px 45px;
+            color: #0066CC;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: auto;
+            display: flex;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <div id="Header">
+        <div id="topmenu">
+            <div id="header-logo">
+                <header>
+
+                    <a href="MasterLayout.html">
+
+                        <img id="logo-shopdunk"  src="https://shopdunk.com/images/thumbs/0012445_Logo_ShopDunk.png" />
+
+                    </a>
+
+                </header>
+            </div>
+            <div id="header-menu" class="header-menu">
+                <nav>
+                    <ul id="menu">
+
+                        <li class="catogory-item" id="catogory-item" style="width: auto; float: left"><a>Iphone </a></li>
+                        <li class="catogory-item" id="catogory-item" style="width: auto; float: left">Ipad </li>
+                        <li class="catogory-item" id="catogory-item" style="width: auto; float: left">Mac </li>
+                        <li class="catogory-item" id="catogory-item" style="width:auto;float:left;">Watch </li>
+                        <li class="catogory-item" id="catogory-item" style="width:auto;float:left;">Âm Thanh </li>
+                        <li class="catogory-item" id="catogory-item" style="width:auto;float:left;">Phụ Kiện </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="header-icon-flag">
+                <header>
+                    <table id="icon-flags" class="icon-flags">
+                        <tr>
+                            <td width="25%">
+                                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            </td>
+                            <td width="25%">
+                                <i class="fa-regular fa-basket-shopping-simple"></i>
+                                <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+                            </td>
+                            <td width="25%">
+                                <img src="https://shopdunk.com/images/uploaded-source/icon/login.png"></img>
+                            </td>
+                            <td>
+                                <img id="flag" width="15" height="15" src="https://shopdunk.com/images/flags/vn.png" alt="" />
+                                <img id="flag" width="15" height="15" src="https://shopdunk.com/images/flags/us.png" />
+                            </td>
+                        </tr>
+                    </table>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div >
+            <img width="100%" height="400" src="https://shopdunk.com/images/uploaded/banner/thang%209%202023/88a7eaf1ca161f484607.jpg" alt="anh Iphone" />
+        </div>
+
+        <div id="KhuyenMai">
+
+            <div class="AnhKhuyenMai">
+
+                <img style="width:450px;height:200px;" src="https://shopdunk.com/images/uploaded/BONUSt7.png">
+
+            </div>
+            <div class="AnhKhuyenMai">
+
+                <img style="width:450px;height:200px;" src="https://shopdunk.com/images/uploaded/Bonus%20banner-26.png">
+
+            </div>
+            <div class="AnhKhuyenMai">
+
+                <img style="width:450px;height:200px;" src="https://shopdunk.com/images/uploaded/Bonus%20banner-16.png">
+
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <article>
+
+            <div class="products">
+                <h1 style="text-align:center;"> iPhone </h1>
+                <table style=" justify-content: space-between;" border="0" id="prod-Info">
+                    <tr>
+                        <td id="IPhone">
+                            <img id="Prod-label" src="https://shopdunk.com/images/uploaded/icon/chao-tan-sv.png" /><br />
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /><br />
+                            <p id="ProdName"><b>iPhone 14 Pro Max 128GB</b> </p>
+                            <p id="newPrice">26.150.000đ</p>
+                            <p id="oldPrice"><del>34.000.000đ</del></p>
+                            <p id="discont">-25%</p>
+                        </td>
+                        <td id="IPhone">
+                            <img id="Prod-label" src="https://shopdunk.com/images/uploaded/icon/chao-tan-sv.png" /><br />
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /><br />
+                            <p id="ProdName"><b>iPhone 14 Pro 128GB</b> </p>
+                            <p id="newPrice">23.890.000đ</p>
+                            <p id="oldPrice"><del>30.000.000đ</del></p>
+                            <p id="discont">-22%</p>
+                        </td>
+                        <td id="IPhone">
+                            <img id="Prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" /><br />
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /><br />
+                            <p id="ProdName"><b>iPhone 15 128GB</b> </p>
+                            <p id="newPrice">22.999.000đ</p>
+                        </td>
+                        <td id="IPhone">
+                            <img id="Prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" /><br />
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /><br />
+                            <p id="ProdName"><b>iPhone 15 Pro Max 256GB</b> </p>
+                            <p id="newPrice">34.999.000đ</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="button" id="prodCat" value="Xem Tat Ca Iphone" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 style="text-align:center"> Ipad </h1>
+
+                <table border="0" id="prod-Info">
+
+                    <tr>
+                        <td style="text-align:center;" id="Ipad">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0000594_ipad-air-4_240.png" /><br />
+                            <p id="ProdName"><b>iPad Air 4</b> </p>
+                            <p id="newPrice">14.990.000₫</p>
+                            <p id="oldPrice"><del>14.990.000₫</del></p>
+                            <p id="discont">-25%</p>
+                        </td>
+                        <td id="Ipad">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0006205_ipad-gen-9-102-inch-wifi-64gb_240.png" /><br />
+                            <p id="ProdName"><b>iPad gen 9 10.2 inch WiFi 64GB</b> </p>
+                            <p id="newPrice">6.890.000đ</p>
+                            <p id="oldPrice"><del>9.990.000đ</del></p>
+                            <p id="discont">-31%</p>
+                        </td>
+                        <td id="Ipad">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0007071_ipad-pro-m2-11-inch-wifi-128gb_240.png" /><br />
+                            <p id="ProdName"><b>iPad Pro M2 11 inch WiFi 128GB</b> </p>
+                            <p id="newPrice">20.190.000đ</p>
+                            <p id="oldPrice"><del>23.990.000đ</del></p>
+                            <p id="discont">-15%</p>
+                        </td>
+                        <td id="Ipad">
+                            <img style=" max-width: 80px; max-height: 25px;" id="Prod-label" src="https://shopdunk.com/images/uploaded/icon/xatonkho.png" /><br />
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0010883_ipad-pro-m1-129-inch-wifi-cellular-512gb_240.webp" /><br />
+                            <p id="ProdName"><b>iPad Pro M1 12.9 inch WiFi Cellular</b> </p>
+                            <p id="newPrice">35.450.000đ</p>
+                            <p id="oldPrice"><del>42.990.000đ</del></p>
+                            <p id="discont">-17%</p>
+                        </td>
+
+                    </tr>
+                </table>
+                <input type="button" id="prodCat" value="Xem Tat Ca Ipad" />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <h1 style="text-align:center;"> Mac </h1>
+                <table style=" justify-content: space-between;" border="0" id="prod-Info">
+                    <tr>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0000723_macbook-air-m1-2020-8gb-ram-256gb-ssd_240.png" /><br />
+                            <p id="ProdName"><b>MacBook Air M1 2020 (8GB RAM | 256GB SSD)</b> </p>
+                            <p id="newPrice">18.690.000đ</p>
+                            <p id="oldPrice"><del>28.690.000đ</del></p>
+                            <p id="discont">-35%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0008502_macbook-air-m2-2022-8gb-ram-256gb-ssd_240.png" /><br />
+                            <p id="ProdName"><b>MacBook Air M1 2022 (8GB RAM | 256GB SSD)</b> </p>
+                            <p id="newPrice">26.850.000đ</p>
+                            <p id="oldPrice"><del>32.990.000đ</del></p>
+                            <p id="discont">-19%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0008682_macbook-pro-13-inch-m2-10-core-8gb-ram-256gb-ssd_240.png" /><br />
+                            <p id="ProdName"><b>MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)</b> </p>
+                            <p id="newPrice">28.890.000₫<p>
+                            <p id="oldPrice"><del>35.990.000đ</del></p>
+                            <p id="discont">-19%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0011267_macbook-pro-14-inch-m2-pro-16-core-16gb-512gb_240.jpeg" /><br />
+                            <p id="ProdName"><b>MacBook Pro 14 inch M2 Pro (16 Core| 16GB| 512GB)</b> </p>
+                            <p id="newPrice">46.590.000đ</p>
+                            <p id="oldPrice"><del>55.000.000đ</del></p>
+                            <p id="discont">-15%</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="button" id="prodCat" value="Xem Tat Ca Mac" />
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 style="text-align:center;"> Watch </h1>
+                <table style=" justify-content: space-between;" border="0" id="prod-Info">
+                    <tr>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0001025_apple-watch-series-7-nhom-gps_240.png" /><br />
+                            <p id="ProdName"><b>Apple Watch Series 7 Nhôm GPS</b> </p>
+                            <p id="newPrice">18.690.000đ</p>
+                            <p id="oldPrice"><del>28.690.000đ</del></p>
+                            <p id="discont">-35%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0000896_apple-watch-se-nhom-gps_240.png" /><br />
+                            <p id="ProdName"><b>Apple Watch SE Nhôm 2022 GPS</b> </p>
+                            <p id="newPrice">26.850.000đ</p>
+                            <p id="oldPrice"><del>32.990.000đ</del></p>
+                            <p id="discont">-19%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0000897_apple-watch-series-3-nhom_240.png" /><br />
+                            <p id="ProdName"><b>Apple Watch Series 3 Nhôm</b> </p>
+                            <p id="newPrice">28.890.000₫<p>
+                            <p id="oldPrice"><del>35.990.000đ</del></p>
+                            <p id="discont">-19%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0008913_apple-watch-ultra-lte-49mm-alpine-loop-size-s_240.png" /><br />
+                            <p id="ProdName"><b>  Apple Watch Ultra LTE 49mm Alpine Loop size S</b> </p>
+                            <p id="newPrice">46.590.000đ</p>
+                            <p id="oldPrice"><del>55.000.000đ</del></p>
+                            <p id="discont">-15%</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="button" id="prodCat" value="Xem Tat Ca Watch" />
+
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 style="text-align:center;"> Âm Thanh </h1>
+                <table style=" justify-content: space-between;" border="0" id="prod-Info">
+                    <tr>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0000211_airpods-pro-2_240.png" /><br />
+                            <p id="ProdName"><b>AirPods Pro 2</b> </p>
+                            <p id="newPrice">5.790.000đ</p>
+                            <p id="oldPrice"><del>6.790.000đ</del></p>
+                            <p id="discont">-14%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0012005_airpods-max_240.webp" /><br />
+                            <p id="ProdName"><b>AirPods Max</b> </p>
+                            <p id="newPrice">12.590.000đ</p>
+                            <p id="oldPrice"><del>13.990.000đ</del></p>
+                            <p id="discont">-10%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0006057_tai-nghe-apple-airpods-3-sac-co-day-lightning_240.jpeg" /><br />
+                            <p id="ProdName"><b>Tai nghe Apple AirPods 3 sạc có dây Lightning</b> </p>
+                            <p id="newPrice">3.990.000₫<p>
+                            <p id="oldPrice"><del>5.490.000đ</del></p>
+                            <p id="discont">-27%</p>
+                        </td>
+                        <td id="Mac">
+                            <img id="Prod-img" src="https://shopdunk.com/images/thumbs/0015612_airpods-2_240.png" /><br />
+                            <p id="ProdName"><b>  AirPods 2</b> </p>
+                            <p id="newPrice">2.590.000đ</p>
+                            <p id="oldPrice"><del>4.390.000đ</del></p>
+                            <p id="discont">-41%</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="button" id="prodCat" value="Xem Tat Ca Watch" />
+            </div>
+
+        </article>
+    </div>
+
+    <br />
+
+    <img style="vertical-align:middle; margin:auto;display:flex;" src="https://shopdunk.com/images/uploaded/Trang%20ch%E1%BB%A7/2.jpeg" />
+
+    <div class="bottomDiv">
+
+        <div class="container">
+            <div class="footer-top">
+                <h2>Đăng ký nhận tin từ ShopDunk</h2>
+                <h3>Thông tin sản phẩm mới nhất và chương trình khuyến mãi</h3>
+                <form>
+                    <input id="email" type="text" placeholder="Mail cua ban" />
+                    <button id="register" style="border:2px solid;" class="DangKy">Dang ky</button>
+                </form>
+            </div>
+        </div>
+        <br />
+        <footer id="footer">
+            <div class="chinh">
+
+                <table style="width:80%;margin:auto;justify-content:center;">
+
+                    <tr>
+                        <td class="sec logo" id="text1">
+                            <img style="width:150px; height:50px;" src="https://shopdunk.com/static/media/0012445_Logo_ShopDunk.ccb234b234f0f4e50514.png" />
+                            <p>
+                                Năm 2020, ShopDunk trở thành đại lý ủy quyền của Apple. Chúng tôi phát triển chuỗi cửa hàng tiêu chuẩn và Apple Mono Store nhằm mang đến trải nghiệm tốt nhất về sản phẩm và dịch vụ của Apple cho người dùng Việt Nam.
+                            </p>
+                            <img src="https://shopdunk.com/Themes/SD/Content/images/Face.png" />
+                            <img src="https://shopdunk.com/Themes/SD/Content/images/Youtube.png" />
+                            <img src="https://shopdunk.com/Themes/SD/Content/images/Zalo.png" />
+
+                        </td>
+
+                        <td class="Logo">
+                        </td>
+                        <td id="text2" class="sec thôngtin">
+                            <h2>Thông tin</h2>
+                            <ul style="list-style:none;  ">
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Check IMEI</a></li>
+                                <li><a href="#">Phương thức thanh toán</a></li>
+                                <li><a href="#">Thuê điểm bán lẻ</a></li>
+                                <li><a href="#">Bảo hành vào sửa chữa</a></li>
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="#">Đánh giá chất lượng, khiếu nại</a></li>
+                            </ul>
+                        </td>
+                        <td id="text3" class="sec chinhsach">
+                            <h2>Chính Sách</h2>
+                            <ul style="list-style:none;">
+                                <li><a href="#">Thu cũ đổi mới</a></li>
+                                <li><a href="#">Giao hàng</a></li>
+                                <li><a href="#">Giao hàng(Zalo Pay)</a></li>
+                                <li><a href="#">Hủy giao dịch</a></li>
+                                <li><a href="#">Đổi trả</a></li>
+                                <li><a href="#">Bảo hành</a></li>
+                                <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="#">Giải quyết khiếu nại</a></li>
+                                <li><a href="#">Bảo mật thông tin</a></li>
+                                <li><a href="#">Hướng dẫn thanh toán qua VNPAY</a></li>
+                            </ul>
+                        </td>
+                        <td id="text4" class="sec diachi">
+                            <h2>Địa chỉ & Liên hệ</h2>
+                            <ul style="list-style:none;">
+                                <li><a href="#">Tài khoản của tôi</a></li>
+                                <li><a href="#">Đơn đặt hàng</a></li>
+                                <li><a href="#">Hệ thống cửa hàng</a></li>
+                                <li><a href="#">Tìm trên Google Map</a></li>
+                                <li><a href="#">Mua hàng: 1900.6626</a></li>
+                                <ul>
+                                    <li>Nhánh 1:Nhánh 1: khu vực Hà Nội và các tỉnh phía bắc</li>
+                                    <li>Nhánh 2: khu vực Hồ Chí Minh và các tỉnh phía nam</li>
+                                    <li>Nhánh 3: Khiếu nại và góp ý</li>
+                                </ul>
+                                <li><a href="#">Doanh nghiệp: 0822.688.668</a></li>
+                                </>
+                        </td>
+
+
+
+
+                    </tr>
+                </table>
+                <div class="footer-bottom" id="footer-bottom">
+                    <h3>© 2016 Công ty Cổ Phần HESMAN Việt Nam GPDKKD: 0107465657 do Sở KH & ĐT TP. Hà Nội cấp ngày 08/06/2016.</h3>
+                    <h3>Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam</h3>
+                    <h3>Đại diện pháp luật: PHẠM MẠNH HÒA | ĐT: 0247.305.9999 | Email: lienhe@shopdunk.com</h3>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
